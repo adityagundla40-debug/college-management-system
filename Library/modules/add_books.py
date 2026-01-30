@@ -12,7 +12,7 @@ def create(parent):
     card.pack(fill="x", padx=60)
 
     fields = [
-        "Book ID",
+        "ISBN",
         "Book Name",
         "Author",
         "Department",

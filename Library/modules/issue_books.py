@@ -20,8 +20,8 @@ def create(parent):
     entries = {}
 
     for i, f in enumerate(fields):
-        tk.Label(card, text=f, bg=BG_CARD).grid(row=i, column=0, pady=8, sticky="w")
-        e = tk.Entry(card, width=40)
+        tk.Label(card, text=f, bg=BG_CARD, font=LABEL_FONT).grid(row=i, column=0, pady=8, sticky="w")
+        e = tk.Entry(card, font=ENTRY_FONT, width=40)
         e.grid(row=i, column=1, pady=8, padx=20)
         entries[f] = e
 
