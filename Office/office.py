@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 
-from modules import welcome, add_student, monitor, add_fee, upgrade_year,issue_bonafide,pass_out_students
+from modules import welcome, add_student, monitor, add_fee, upgrade_year,issue_bonafide,pass_out_students, add_staff
 
 # ================= ROOT =================
 root = tk.Tk()
@@ -187,7 +187,8 @@ frames = {
     "add_fee": add_fee.create(content),
     "upgrade": upgrade_year.create(content),
     "bonafide": issue_bonafide.create(content),
-    "pass_out": pass_out_students.create(content)
+    "pass_out": pass_out_students.create(content),
+    "add_staff": add_staff.create(content)
 }
 
 # ================= BUTTON STYLING =================
@@ -286,6 +287,9 @@ sidebar_buttons["bonafide"].pack(pady=2)
 
 sidebar_buttons["pass_out"] = create_sidebar_button("Pass Out Students", lambda: show_frame("pass_out"), "pass_out")
 sidebar_buttons["pass_out"].pack(pady=2)
+
+sidebar_buttons["add_staff"] = create_sidebar_button("Add New Staff", lambda: show_frame("add_staff"), "add_staff")
+sidebar_buttons["add_staff"].pack(pady=2)
 
 # ================= STARTUP SCREEN =================
 show_frame("welcome")
